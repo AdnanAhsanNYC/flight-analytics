@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_flights
+    description: "Cleaned and typed flight data from BTS raw source"
+    columns:
+      - name: flight_date
+        tests:
+          - not_null
+      - name: airline
+        tests:
+          - not_null
+      - name: origin_airport
+        tests:
+          - not_null
+      - name: dest_airport
+        tests:
+          - not_null
+      - name: is_cancelled
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: is_delayed
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [true, false]
