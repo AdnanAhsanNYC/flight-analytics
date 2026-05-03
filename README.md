@@ -27,6 +27,7 @@ air travel from 2020 through recovery.
 BTS API → Python → Snowflake (RAW) → dbt Cloud → Snowflake (DBT_DEV) → Looker Studio
 
 ## Project Structure
+```
 flight-analytics/
 ├── models/
 │   ├── staging/          ← stg_flights, stg_airline_lookup, stg_airport_lookup
@@ -35,7 +36,7 @@ flight-analytics/
 ├── notebooks/            ← Python ingestion scripts
 ├── data/clean/           ← exported mart CSVs for Looker Studio
 └── outputs/              ← dashboard screenshots
-
+```
 
 ## dbt Models
 | Model | Layer | Description |
