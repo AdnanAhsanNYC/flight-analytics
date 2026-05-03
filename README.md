@@ -1,15 +1,26 @@
-Welcome to your new dbt project!
+# US Flight Delay Analytics Pipeline
 
-### Using the starter project
+An end-to-end analytics engineering project analyzing 55M+ US domestic flights 
+from 2016 to 2026 using Python, Snowflake, dbt Cloud, and Looker Studio.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Live Dashboard
+[View on Looker Studio](https://datastudio.google.com/reporting/3760834f-c80e-4fb3-a6ac-4873a1f6c7cb/page/NB2wF)
 
+![Dashboard Preview](outputs/dFlight_Delay_Dashboard.png)
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Problem Statement
+US airline on-time performance has been declining despite record passenger volumes. 
+This project builds a production-style ELT pipeline to identify which airlines, 
+airports, and delay causes are driving performance trends — and how COVID reshaped 
+air travel from 2020 through recovery.
+
+## Stack
+| Layer | Tool |
+|-------|------|
+| Ingestion | Python (requests, pandas, snowflake-connector) |
+| Data Warehouse | Snowflake |
+| Transformation | dbt Cloud |
+| Visualization | Looker Studio |
+| Version Control | Git / GitHub |
+
+## Pipeline Architecture
