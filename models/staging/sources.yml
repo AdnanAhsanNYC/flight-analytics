@@ -6,3 +6,5 @@ sources:
     schema: RAW
     tables:
       - name: FLIGHTS
+      - name: AIRLINE_LOOKUP
+      - name: AIRPORT_LOOKUP
