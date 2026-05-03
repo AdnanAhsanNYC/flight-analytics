@@ -6,7 +6,7 @@ from 2016 to 2026 using Python, Snowflake, dbt Cloud, and Looker Studio.
 ## Live Dashboard
 [View on Looker Studio](https://datastudio.google.com/reporting/3760834f-c80e-4fb3-a6ac-4873a1f6c7cb/page/NB2wF)
 
-![Dashboard Preview](outputs/dFlight_Delay_Dashboard.png)
+![Dashboard Preview](outputs/Flight_Delay_Dashboard.png)
 
 ## Problem Statement
 US airline on-time performance has been declining despite record passenger volumes. 
