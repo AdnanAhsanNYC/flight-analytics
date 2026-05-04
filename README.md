@@ -11,7 +11,7 @@ from 2016 to 2026 using Python, Snowflake, dbt Cloud, and Looker Studio.
 ## Problem Statement
 US airline on-time performance has been declining despite record passenger volumes. 
 This project builds a production-style ELT pipeline to identify which airlines, 
-airports, and delay causes are driving performance trends — and how COVID reshaped 
+airports, and delay causes are driving performance trends and how COVID reshaped 
 air travel from 2020 through recovery.
 
 ## Stack
@@ -55,12 +55,12 @@ flight-analytics/
 - not_null, accepted_values, and unique constraints enforced
 
 ## Key Findings
-1. **COVID collapsed air travel by 37% in 2020** — monthly flights dropped from 
+1. **COVID collapsed air travel by 37% in 2020** monthly flights dropped from 
    620k to 180k at the lowest point in May 2020
-2. **Southwest Airlines December 2022 meltdown** is clearly visible as a spike 
+2. **Southwest Airlines December 2022 holiday travel meltdown** is clearly visible as a spike 
    in cancellation rate
 3. **Carrier delays account for the largest share** of total delay minutes 
-   across all years — airlines are more responsible for delays than weather or the FAA
+   across all years as airlines are more responsible for delays than weather or the FAA
 4. **West Virginia has the highest average departure delay** of any state 
    despite having low total flight volume
 
@@ -68,7 +68,7 @@ flight-analytics/
 - **Provider:** Bureau of Transportation Statistics (BTS)
 - **Dataset:** Airline On-Time Performance Data
 - **Link:** https://www.transtats.bts.gov
-- **Period:** January 2016 — January 2026
+- **Period:** January 2016 - January 2026
 - **Scale:** 55M+ flight records across 18 columns
 
 ## Data Dictionary
