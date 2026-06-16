@@ -1,0 +1,6 @@
+duckdb
+dbt-duckdb
+pandas
+requests
+gspread
+google-auth

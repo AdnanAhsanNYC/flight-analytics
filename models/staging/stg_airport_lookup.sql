@@ -4,4 +4,4 @@ SELECT
     CITY            AS city,
     LATITUDE        AS latitude,
     LONGITUDE       AS longitude
-FROM {{ source('raw', 'AIRPORT_LOOKUP') }}
+FROM {{ source('raw', 'airport_lookup') }}

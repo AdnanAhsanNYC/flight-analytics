@@ -2,9 +2,8 @@ version: 2
 
 sources:
   - name: raw
-    database: FLIGHTS_DB
-    schema: RAW
+    schema: raw
     tables:
-      - name: FLIGHTS
-      - name: AIRLINE_LOOKUP
-      - name: AIRPORT_LOOKUP
+      - name: flights
+      - name: airline_lookup
+      - name: airport_lookup

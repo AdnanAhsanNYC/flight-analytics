@@ -40,7 +40,7 @@ models:
   - name: mart_airport_performance
     description: "Airport departure performance by year"
     columns:
-      - name: origin_airport
+      - name: airport_code
         tests:
           - not_null
       - name: flight_year

@@ -4,12 +4,18 @@ dbt_packages/
 logs/
 dbt_internal_packages/
 
-# Python project
-data/raw/
-.DS_Store
-*.zip
+# DuckDB
+data/*.duckdb
+
+# Python
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 venv/
 .env
+
+# Mac
+.DS_Store
+
+# Google
+flight-analytics-499622-5f8207a26720.json

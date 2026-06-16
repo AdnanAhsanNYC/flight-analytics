@@ -25,4 +25,4 @@ SELECT
     CASE WHEN ARRDELAY::FLOAT <= 15
           AND CANCELLED = 0
          THEN TRUE ELSE FALSE END                   AS is_on_time
-FROM {{ source('raw', 'FLIGHTS') }}
+FROM {{ source('raw', 'flights') }}

@@ -1,0 +1,37 @@
+name: Flight Analytics Pipeline
+
+on:
+  schedule:
+    - cron: '0 8 15 * *'  # 8am UTC on the 15th of every month
+  workflow_dispatch:        # allows manual trigger from GitHub UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run ingestion
+        run: python ingestion/ingest.py
+
+      - name: Run dbt
+        run: |
+          dbt deps
+          dbt build
+        env:
+          DUCKDB_PATH: data/flights.duckdb
+
+      - name: Export to Google Sheets
+        run: python ingestion/export_to_sheets.py
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}

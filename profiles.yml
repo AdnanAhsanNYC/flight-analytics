@@ -1,0 +1,7 @@
+flight_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DUCKDB_PATH', 'data/flights.duckdb') }}"
+      threads: 1
